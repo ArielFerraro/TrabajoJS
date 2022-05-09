@@ -29,4 +29,9 @@ let op;
         document.querySelector('#r').innerHTML = r;
     });
     
-    
+    const boton1 = document.querySelector ("#1")
+
+    boton1.addEventListener("click", () => {
+        const n1 = parseInt(document.querySelector('#1').value);
+
+    })
