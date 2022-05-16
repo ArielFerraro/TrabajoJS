@@ -29,9 +29,21 @@ let op;
         document.querySelector('#r').innerHTML = r;
     });
     
-    const boton1 = document.querySelector ("#1")
 
-    boton1.addEventListener("click", () => {
-        const n1 = parseInt(document.querySelector('#1').value);
 
-    })
+
+const resultado = document.querySelector('#calcular')
+
+
+
+resultado.addEventListener ('click', agregoResultado)
+function agregoResultado (evt){
+    evt.preventDefault ();
+    
+    const resultado = document.querySelector ('#r').value
+    
+    
+    sessionStorage.setItem ("Resultado",resultado );
+
+}
+
