@@ -1,3 +1,11 @@
+
+Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'La Calculadora está lista para usar',
+    showConfirmButton: false,
+    timer: 1500
+})
 let op;
     document.querySelector('#suma').addEventListener('click', () =>{
         op = '+';
@@ -46,4 +54,11 @@ function agregoResultado (evt){
     sessionStorage.setItem ("Resultado",resultado );
 
 }
+
+
+
+
+
+
+
 
