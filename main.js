@@ -55,10 +55,39 @@ function agregoResultado (evt){
 
 }
 
+    mostrarHTML = (obj) =>{
+        contenido.innerHTML=`
+        <p> Autor : ${obj.nombre} </p>
+        <p> Fecha : ${obj.fecha} </p>
+
+        
+        
+        `
+    }
 
 
 
 
+
+    const agregoAutor = () =>{
+        fetch ("data.json")
+        .then ((respuesta)=>{
+            // console.log(respuesta)
+            return respuesta.json()
+        })
+        .then ((dato) => {
+            mostrarHTML(dato)
+        })
+        .catch ((err) => {
+            console.log ("error: ", err)
+        })
+    }
+
+    const autor = document.querySelector ('#autor')
+    autor.addEventListener ('click', agregoAutor)
+
+    const contenido = document.querySelector('#contenido')
+    
 
 
 
