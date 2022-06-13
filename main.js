@@ -59,20 +59,12 @@ function agregoResultado (evt){
         contenido.innerHTML=`
         <p> Autor : ${obj.nombre} </p>
         <p> Fecha : ${obj.fecha} </p>
-
-        
-        
         `
     }
-
-
-
-
 
     const agregoAutor = () =>{
         fetch ("data.json")
         .then ((respuesta)=>{
-            // console.log(respuesta)
             return respuesta.json()
         })
         .then ((dato) => {
